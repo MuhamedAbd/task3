@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #e6e6e6;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header header header"
+        "profile skills projects";
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    /*padding: 20px; */
+    max-width: 100%;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f08060;
+    padding: 20px;
+    width: 100%;
+}
+
+.logo {
+    background-color: #ccc;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.search-bar button {
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.contact a {
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.profile, .skills, .projects {
+    background-color: #00c4c4;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.profile {
+    grid-area: profile;
+    text-align: center;
+}
+
+.profile-pic {
+    background-color: #333;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px auto;
+    border-radius: 10px;
+}
+
+.skills {
+    grid-area: skills;
+}
+.skills img{
+    width: 50px;
+    height: 50px;
+    justify-content: space-around;
+
+}
+.skills ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.projects {
+    /* display: grid; */
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "prj-h"
+    "prj-g";
+    display: flex;
+    
+}
+
+.project-grid {
+    width: 100%;
+    height: 75%;
+    grid-area: prj-g;
+    /* display: grid; */
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "prj1"
+    "prj2"
+    "prj3"
+    "prj4"
+    ;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+    
+
+}
+
+
+.project {
+    background-color: #f08060;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+h2, h3 {
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+p{
+    font-size: 20px;
+}
+ul{
+    font-size: 20px;
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.project1{
+    grid-area:prj1;
+    width: 25%;
+    height: 25%;
+    object-fit: cover;
+    object-position: center;
+}
+.project2{
+    grid-area:prj2;
+    width: 25%;
+    height: 25%;
+    object-fit: cover;
+    object-position: center;
+
+}
+.project3{
+    grid-area:prj3;
+    width: 25%;
+    height: 25%;
+    object-fit: cover;
+    object-position: center;
+}
+.project4{
+    grid-area:prj4;
+    width: 25%;
+    height: 25%;
+    object-fit: cover;
+    object-position: center;
+
+}
+button img{
+    width: 20px;
+    height: 20px;
+}
+/* .projects{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "prj-g";
+} */
+.prj-img{
+    width: 50px;
+    height: 50px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prj-h{
+    grid-area: prj-h;
+}
+.prj-button {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(92, 97, 91);
+    color: rgb(60, 206, 182);
+    font-size: 15px;
+    border: 1px solid #e74d27;
+}
+.prj-button :hover{
+    background-color: #fff;
+    color: rgb(107, 119, 104);
+    border: 1px solid rgb(238, 75, 46);
+    font-weight: bold;
+}
+.about{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
